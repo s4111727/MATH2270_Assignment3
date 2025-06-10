@@ -29,7 +29,7 @@ Photographer: Noriko Hayashi
 
 ### A Rising Proportion of Australians Embracing Japan's Winter
 
-```{r, echo=FALSE, out.width="100%"}
+```{r, echo=FALSE}
 destinations <- read.csv("destinations_clean.csv")
 destinations$Month <- factor(destinations$Month,
                              levels=c("Jan", "Feb", "Mar", "Apr", "May", "Jun",
