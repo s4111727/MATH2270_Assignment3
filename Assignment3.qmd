@@ -46,7 +46,7 @@ plot_ly(destinations, x=~Month, y=~Japan_Ratio*100, frame=~Year,
                                       "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")),
          yaxis=list(title=list(text="Share of Outbound Australians (%)", standoff=5),
                     zeroline=FALSE, automargin=TRUE, range=c(0,10)),
-         autosize=TRUE) %>%
+         autosize=TRUE, margin=list(autoexpand=TRUE, l=100, r=100, b=100, t=100)) %>%
   animation_opts(frame=400, transition=100, redraw=TRUE, mode="immediate") %>%
   animation_slider(currentvalue=list(prefix="Year: ", font=list(color="black")))
 ```
@@ -86,7 +86,8 @@ plot_ly(reasons, x=~Activity, y=~All, type="bar", name="All countries",
                                     "Pop-culture tourism", "Pop culture", "Ryokan",
                                     "Seasonal event", "Shopping", "Shopping districts",
                                     "Shows", "Ski/snowboard", "Sports watching",
-                                    "Theme parks"))) %>%
+                                    "Theme parks")),
+         autosize=TRUE, margin=list(autoexpand=TRUE, l=100, r=100, b=100, t=100)) %>%
   add_annotations(x="Ski/snowboard", y=25, text="", arrowhead=2, arrowsize=1,
                   arrowwidth=10, ax=0, ay=-150, arrowcolor="red")
 ```
@@ -203,7 +204,8 @@ plot_ly() %>%
          barmode="stack", updatemenus=updatemenus,
          xaxis=list(title="Ski resort", categoryorder="array",
                     categoryarray=c("Falls Creek", "Hakuba")),
-         yaxis=list(title="Cost (AUD)", zeroline=FALSE, range=c(0,15000)))
+         yaxis=list(title="Cost (AUD)", zeroline=FALSE, range=c(0,15000)),
+         autosize=TRUE, margin=list(autoexpand=TRUE, l=100, r=100, b=100, t=100))
 ```
 
 ::: {style="font-size: 60%;"}
@@ -233,7 +235,8 @@ plot_ly() %>%
                     y=0.975, yanchor="top"),
          legend=list(orientation="h", y=0.95, xanchor="center", x=0.5),
          xaxis=list(title="Population (%)",  range=c(1999,2021)),
-         yaxis=list(title="Year", zeroline=FALSE, range=c(0,5.5)))
+         yaxis=list(title="Year", zeroline=FALSE, range=c(0,5.5)),
+         autosize=TRUE, margin=list(autoexpand=TRUE, l=100, r=100, b=100, t=100))
   
 ```
 
