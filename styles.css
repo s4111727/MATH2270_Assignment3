@@ -9,3 +9,8 @@
   text-indent: -4em;   
   white-space: normal; 
 }
+
+.plot-container {
+  width: 100% !important;
+  height: auto !important;
+}
