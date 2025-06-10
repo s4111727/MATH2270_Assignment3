@@ -44,7 +44,7 @@ plot_ly(destinations, x=~Month, y=~Japan_Ratio*100, frame=~Year,
                     automargin=TRUE),
          yaxis=list(title=list(text="Share of Outbound Australians (%)", standoff=5),
                     zeroline=FALSE, automargin=TRUE),
-         autosize=TRUE, width=1000, height=400) %>%
+         autosize=TRUE, width=900, height=500) %>%
   animation_opts(frame=400, transition=100, redraw=TRUE, mode="immediate") %>%
   animation_slider(currentvalue=list(prefix="Year: ", font=list(color="black")))
 ```
@@ -77,7 +77,7 @@ plot_ly(reasons, x=~Activity, y=~All, type="bar", name="All countries",
                     standoff=5, range=c(0,110)), barmode="group",
          legend=list(orientation="h", y=0.95, xanchor="center", x=0.5),
          xaxis=list(title="Activity", tickangle=-35),
-         width=1000, height=400) %>%
+         width=900, height=500) %>%
   add_annotations(x="Ski/snowboard", y=25, text="", arrowhead=2, arrowsize=1,
                   arrowwidth=10, ax=0, ay=-150, arrowcolor="red")
 ```
