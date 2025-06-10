@@ -29,6 +29,7 @@ Photographer: Noriko Hayashi
 
 ### A Rising Proportion of Australians Embracing Japan's Winter
 
+<div style="width:100%; overflow-x:auto;">
 ```{r, echo=FALSE, out.width="100%"}
 destinations <- read.csv("destinations_clean.csv")
 destinations$Month <- factor(destinations$Month,
@@ -44,11 +45,12 @@ plot_ly(destinations, x=~Month, y=~Japan_Ratio*100, frame=~Year,
                     automargin=TRUE),
          yaxis=list(title=list(text="Share of Outbound Australians (%)", standoff=5),
                     zeroline=FALSE, automargin=TRUE),
-         autosize=TRUE, height=500) %>%
+         autosize=TRUE) %>%
   animation_opts(frame=400, transition=100, redraw=TRUE, mode="immediate") %>%
   animation_slider(currentvalue=list(prefix="Year: ", font=list(color="black"))) %>%
   config(responsive=TRUE)
 ```
+</div>
 
 ::: {style="text-align: right; font-size: 60%;"}
 \*[Blue]{style="color: dodgerblue;"} bars represent Japan's snow season
@@ -78,9 +80,10 @@ plot_ly(reasons, x=~Activity, y=~All, type="bar", name="All countries",
                     standoff=5, range=c(0,110)), barmode="group",
          legend=list(orientation="h", y=0.95, xanchor="center", x=0.5),
          xaxis=list(title="Activity", tickangle=-35),
-         width=900, height=500) %>%
+         autosize=TRUE) %>%
   add_annotations(x="Ski/snowboard", y=25, text="", arrowhead=2, arrowsize=1,
-                  arrowwidth=10, ax=0, ay=-150, arrowcolor="red")
+                  arrowwidth=10, ax=0, ay=-150, arrowcolor="red") %>%
+  config(responsive=TRUE)
 ```
 
 ::: {style="font-size: 60%;"}
@@ -192,10 +195,11 @@ plot_ly() %>%
             type="bar", name=~Category, legendgroup=~Category, visible=FALSE) %>%
   layout(title=list(text="Total Cost of a One-Week Family Ski Vacation", 
                     y=0.975, yanchor="top"),
-         width=900, height=400,
+         autosize=TRUE,
          barmode="stack", updatemenus=updatemenus,
          xaxis=list(title="Ski resort"),
-         yaxis=list(title="Cost (AUD)", zeroline=FALSE, range=c(0,15000)))
+         yaxis=list(title="Cost (AUD)", zeroline=FALSE, range=c(0,15000))) %>%
+  config(responsive=TRUE)
 ```
 
 ::: {style="font-size: 60%;"}
@@ -226,7 +230,8 @@ plot_ly() %>%
          legend=list(orientation="h", y=0.95, xanchor="center", x=0.5),
          xaxis=list(title="Population (%)",  range=c(1999,2021)),
          yaxis=list(title="Year", zeroline=FALSE, range=c(0,5.5)),
-         width=1000, height=400)
+         autosize=TRUE) %>%
+  config(responsive=TRUE)
   
 ```
 
