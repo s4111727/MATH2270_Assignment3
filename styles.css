@@ -9,13 +9,3 @@
   text-indent: -4em;   
   white-space: normal; 
 }
-
-.reveal .slides section .plot-container {
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.reveal .slides {
-  width: 100% !important;
-  height: 100% !important;
-}
