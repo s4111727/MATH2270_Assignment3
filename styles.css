@@ -10,7 +10,6 @@
   white-space: normal; 
 }
 
-.plot-container {
-  width: 100% !important;
-  height: auto !important;
+.plotly html-widget {
+  height: 500px !important;
 }
