@@ -29,7 +29,6 @@ Photographer: Noriko Hayashi
 
 ### A Rising Proportion of Australians Embracing Japan's Winter
 
-<div style="width:100%; height:500px;">
 ```{r, echo=FALSE}
 destinations <- read.csv("destinations_clean.csv")
 destinations$Month <- factor(destinations$Month,
@@ -50,7 +49,6 @@ plot_ly(destinations, x=~Month, y=~Japan_Ratio*100, frame=~Year,
   animation_slider(currentvalue=list(prefix="Year: ", font=list(color="black"))) %>%
   config(responsive=TRUE)
 ```
-</div>
 
 ::: {style="text-align: right; font-size: 60%;"}
 \*[Blue]{style="color: dodgerblue;"} bars represent Japan's snow season
