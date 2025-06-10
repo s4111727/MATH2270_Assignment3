@@ -38,11 +38,9 @@ plot_ly(destinations, x=~Month, y=~Japan_Ratio*100, frame=~Year,
         type="bar", color=~Winter,
         colors=c("Winter"="dodgerblue", "Other"="gray80")) %>%
   layout(showlegend=FALSE,
-         title=list(text="Proportion of Outbound Australians Travelling to Japan",
-                    y=0.95, yanchor="top"),
-         xaxis=list(title=list(text="Month", standoff=10), zeroline=FALSE,
-                    automargin=TRUE),
-         yaxis=list(title=list(text="Share of Outbound Australians (%)", standoff=5),
+         title=list(text="Proportion of Outbound Australians Travelling to Japan"),
+         xaxis=list(title=list(text="Month"), zeroline=FALSE,),
+         yaxis=list(title=list(text="Share of Outbound Australians (%)"),
                     zeroline=FALSE, automargin=TRUE),
          autosize=TRUE) %>%
   animation_opts(frame=400, transition=100, redraw=TRUE, mode="immediate") %>%
