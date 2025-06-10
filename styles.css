@@ -9,3 +9,19 @@
   text-indent: -4em;   
   white-space: normal; 
 }
+
+.reveal .slides section .plotly.html-widget {
+  width: 100% !important;
+  height: 600px !important;  
+  margin: 0 auto !important;
+}
+
+.reveal .slides section .plot-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.reveal .slides {
+  width: 100% !important;
+  height: 100% !important;
+}

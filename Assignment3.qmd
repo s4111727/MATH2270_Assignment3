@@ -45,8 +45,7 @@ plot_ly(destinations, x=~Month, y=~Japan_Ratio*100, frame=~Year,
                     categoryarray=c("Jan", "Feb", "Mar", "Apr", "May", "Jun",
                                       "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")),
          yaxis=list(title=list(text="Share of Outbound Australians (%)", standoff=5),
-                    zeroline=FALSE, automargin=TRUE, range=c(0,10)),
-         autosize=TRUE, margin=list(autoexpand=TRUE, l=100, r=100, b=100, t=100)) %>%
+                    margin=list(l=80, r=80, b=100, t=80, pad=10))) %>%
   animation_opts(frame=400, transition=100, redraw=TRUE, mode="immediate") %>%
   animation_slider(currentvalue=list(prefix="Year: ", font=list(color="black")))
 ```
