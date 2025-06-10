@@ -44,7 +44,8 @@ plot_ly(destinations, x=~Month, y=~Japan_Ratio*100, frame=~Year,
          yaxis=list(title=list(text="Share of Outbound Australians (%)"),
                     zeroline=FALSE)) %>%
   animation_opts(frame=400, transition=100, redraw=TRUE, mode="immediate") %>%
-  animation_slider(currentvalue=list(prefix="Year: ", font=list(color="black")))
+  animation_slider(currentvalue=list(prefix="Year: ", font=list(color="black"))) %>%
+  config(response=TRUE)
 ```
 
 ::: {style="text-align: right; font-size: 60%;"}
@@ -59,7 +60,7 @@ Data source: Japan National Tourism Organization (2024)
 
 ### 6x More Australians Ski Japan Than The Global Tourist Average
 
-```{r, echo=FALSE, out.width="100%"}
+```{r, echo=FALSE}
 reasons <- read.csv("reasons_clean.csv")
 reasons$Activity <- factor(reasons$Activity)
 plot_ly(reasons, x=~Activity, y=~All, type="bar", name="All countries",
@@ -162,7 +163,7 @@ Data source: Zippenfenig (2023), Hersbach et al. (2023), Muñoz Sabater (2019), 
 -   A large portion of the cost of holidaying in Japan is the plane ticket
 -   During the off-peak period, Hakuba in Japan is cheaper than Falls Creek in Victoria
 
-```{r, echo=FALSE, out.width="100%"}
+```{r, echo=FALSE}
 costs <- read.csv("costs.csv")
 
 peak_costs <- costs %>% filter(Time == "Peak")
