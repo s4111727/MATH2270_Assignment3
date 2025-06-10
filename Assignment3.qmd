@@ -44,7 +44,7 @@ plot_ly(destinations, x=~Month, y=~Japan_Ratio*100, frame=~Year,
                     automargin=TRUE),
          yaxis=list(title=list(text="Share of Outbound Australians (%)", standoff=5),
                     zeroline=FALSE, automargin=TRUE),
-         autosize=TRUE, width=1000, height=600) %>%
+         autosize=TRUE, width=1000, height=400) %>%
   animation_opts(frame=400, transition=100, redraw=TRUE, mode="immediate") %>%
   animation_slider(currentvalue=list(prefix="Year: ", font=list(color="black")))
 ```
@@ -77,7 +77,7 @@ plot_ly(reasons, x=~Activity, y=~All, type="bar", name="All countries",
                     standoff=5, range=c(0,110)), barmode="group",
          legend=list(orientation="h", y=0.95, xanchor="center", x=0.5),
          xaxis=list(title="Activity", tickangle=-35),
-         width=1000, height=600) %>%
+         width=1000, height=400) %>%
   add_annotations(x="Ski/snowboard", y=25, text="", arrowhead=2, arrowsize=1,
                   arrowwidth=10, ax=0, ay=-150, arrowcolor="red")
 ```
@@ -191,7 +191,7 @@ plot_ly() %>%
             type="bar", name=~Category, legendgroup=~Category, visible=FALSE) %>%
   layout(title=list(text="Total Cost of a One-Week Family Ski Vacation", 
                     y=0.975, yanchor="top"),
-         width=1000, height=600,
+         width=900, height=400,
          barmode="stack", updatemenus=updatemenus,
          xaxis=list(title="Ski resort"),
          yaxis=list(title="Cost (AUD)", zeroline=FALSE, range=c(0,15000)))
@@ -225,7 +225,7 @@ plot_ly() %>%
          legend=list(orientation="h", y=0.95, xanchor="center", x=0.5),
          xaxis=list(title="Population (%)",  range=c(1999,2021)),
          yaxis=list(title="Year", zeroline=FALSE, range=c(0,5.5)),
-         width=1000, height=600)
+         width=1000, height=400)
   
 ```
 
