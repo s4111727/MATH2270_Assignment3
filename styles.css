@@ -10,6 +10,8 @@
   white-space: normal; 
 }
 
-.plotly html-widget {
+.plotly.html-widget {
   height: 500px !important;
+  width: 100% !important;
+  margin: auto;
 }
