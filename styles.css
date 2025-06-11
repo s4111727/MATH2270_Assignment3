@@ -24,6 +24,9 @@
 }
 
 .plot-container {
-  text-align: center;
-  overflow: hidden;
+  overflow: visible !important;
+  height: auto;
+}
+.reveal .slide {
+  overflow-y: visible !important;
 }
