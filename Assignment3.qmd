@@ -30,8 +30,8 @@ Photographer: Noriko Hayashi
 
 ### A Rising Proportion of Australians Embracing Japan's Winter
 
-::: {.plot-container}
-```{r, echo=FALSE, out.width="100%"}
+::: {.plot-container style="width:100%; height: 600px;"}
+```{r, echo=FALSE}
 destinations <- read.csv("destinations_clean.csv")
 destinations$Month <- factor(destinations$Month,
                              levels=c("Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -62,8 +62,8 @@ Data source: Japan National Tourism Organization (2024)
 
 ### 6x More Australians Ski Japan Than The Global Tourist Average
 
-::: {.plot-container}
-```{r, echo=FALSE, out.width="100%"}
+::: {.plot-container style="width:100%; height: 600px;"}
+```{r, echo=FALSE}
 reasons <- read.csv("reasons_clean.csv")
 reasons$Activity <- factor(reasons$Activity)
 plot_ly(reasons, x=~Activity, y=~All, type="bar", name="All countries",
@@ -167,8 +167,8 @@ Data source: Zippenfenig (2023), Hersbach et al. (2023), Muñoz Sabater (2019), 
 -   A large portion of the cost of holidaying in Japan is the plane ticket
 -   During the off-peak period, Hakuba in Japan is cheaper than Falls Creek in Victoria
 
-::: {.plot-container}
-```{r, echo=FALSE, out.width="100%"}
+::: {.plot-container style="width:100%; height: 600px;"}
+```{r, echo=FALSE}
 costs <- read.csv("costs.csv")
 
 peak_costs <- costs %>% filter(Time == "Peak")
@@ -215,8 +215,8 @@ Data source: Malcolm (2024)
 -   Growing foreigner population & tourism numbers encouraged development of English services and support
 -   Compared to Europe, requires less travel time and induces less jetlag (+/-1 hour)
 
-::: {.plot-container}
-```{r, echo=FALSE, out.width="100%"}
+::: {.plot-container style="width:100%; height: 600px;"}
+```{r, echo=FALSE}
 populations <- read.csv("populations.csv")
 populations$prop <- (populations$Foreigners/populations$Total.population)*100
 
@@ -235,7 +235,6 @@ plot_ly() %>%
          yaxis=list(title="Year", zeroline=FALSE, range=c(0,5.5)),
          autosize=FALSE) %>%
   config(responsive=TRUE)
-  
 ```
 :::
 
